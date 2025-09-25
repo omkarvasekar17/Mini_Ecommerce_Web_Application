@@ -1,0 +1,201 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header and navigation */
+header nav {
+    background-color: #3949ab;
+    padding: 10px;
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav span {
+    color: #ffeb3b;
+    margin-right: 10px;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+/* Headings */
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+
+/* Forms */
+.form input, .form select, .form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5c6bc0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #3949ab;
+}
+
+/* Product grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product-card {
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    text-align: center;
+    background: white;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Flash messages */
+.flash {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.flash.success {
+    background-color: #c8e6c9;
+    color: #256029;
+}
+
+.flash.error {
+    background-color: #ffcdd2;
+    color: #c62828;
+}
+
+
+
+#homepage
+
+/* Header and navigation */
+header nav {
+    background-color: #3949ab;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header nav .nav-link {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav .nav-link:hover {
+    color: #ffeb3b;
+}
+
+header nav .welcome-text {
+    color: #ffeb3b;
+    margin-right: 15px;
+}
+
+/* Flash messages */
+.flash {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.flash.success {
+    background-color: #c8e6c9;
+    color: #256029;
+}
+
+.flash.error {
+    background-color: #ffcdd2;
+    color: #c62828;
+}
+
+
+
+/* Homepage container */
+.home-container {
+    text-align: center;
+    margin-top: 100px;
+    font-family: Arial, sans-serif;
+}
+
+/* Heading */
+.home-container h1 {
+    font-size: 36px;
+    color: #3949ab;
+    margin-bottom: 20px;
+}
+
+/* Paragraph */
+.home-container p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Buttons */
+.home-buttons a.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #3949ab;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.home-buttons a.btn:hover {
+    background-color: #5c6bc0;
+}

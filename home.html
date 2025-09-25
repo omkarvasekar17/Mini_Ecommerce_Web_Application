@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}Home{% endblock %}
+
+{% block head %}
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="{{ url_for('../static', filename='style.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="home-container">
+    <h1>Welcome to the E-Commerce App 🚀</h1>
+    <p>Please login or register to start shopping.</p>
+    <div class="home-buttons">
+        <a href="{{ url_for('users.login') }}" class="btn">Login</a>
+        <a href="{{ url_for('users.register') }}" class="btn">Register</a>
+    </div>
+</div>
+{% endblock %} 

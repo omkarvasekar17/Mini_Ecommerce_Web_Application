@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}E-Commerce App{% endblock %}</title>
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="{{ url_for('home') }}" class="nav-link">Home</a>
+        {% if current_user.is_authenticated %}
+            <span class="welcome-text">Welcome, {{ current_user.username }}!</span>
+            <a href="{{ url_for('products.list_products') }}" class="nav-link">Products</a>
+            <a href="{{ url_for('orders.view_orders') }}" class="nav-link">Orders</a>
+            <a href="{{ url_for('users.logout') }}" class="nav-link">Logout</a>
+        {% else %}
+            <a href="{{ url_for('users.login') }}" class="nav-link">Login</a>
+            <a href="{{ url_for('users.register') }}" class="nav-link">Register</a>
+        {% endif %}
+    </nav>
+</header>
+
+<div class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="flash {{ category }}">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>
