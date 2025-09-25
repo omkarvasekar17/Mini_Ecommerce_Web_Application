@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block title %}Products{% endblock %}
+
+{% block content %}
+<h1>Products</h1>
+
+{% if current_user.role == 'Seller' %}
+    <p><a href="{{ url_for('products.add_product') }}" class="btn">Add New Product</a></p>
+{% endif %}
+
+<div class="product-grid">
+    {% for product in products %}
+    <div class="product-card">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.description }}</p>
+        <p><strong>Price:</strong> ${{ "%.2f"|format(product.price) }}</p>
+        <p><strong>Stock:</strong> {{ product.stock }}</p>
+        
+        {% if current_user.role == 'Customer' %}
+            {% if product.stock > 0 %}
+                <a href="{{ url_for('orders.place_order', product_id=product.id) }}" class="btn">Buy Now</a>
+            {% else %}
+                <button class="btn" disabled>Out of Stock</button>
+            {% endif %}
+        {% elif current_user.role == 'Seller' and product.seller_id == current_user.id %}
+            <p><em>Your Product</em></p>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
