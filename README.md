@@ -68,7 +68,7 @@ Three main tables are used to support different roles and operations:</p>
 
 <ol>
   <li>Clone this repository:
-    <pre><code>git clone &lt;repo-url&gt;</code></pre>
+    <pre><code>git clone https://github.com/omkarvasekar17/Mini_Ecommerce_Web_Application/tree/main</code></pre>
   </li>
   <li>Create and activate a virtual environment</li>
   <li>Install dependencies:
